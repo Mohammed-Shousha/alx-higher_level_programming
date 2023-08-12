@@ -1,6 +1,6 @@
-#include <listobject.h>
-#include <object.h>
 #include <Python.h>
+#include <object.h>
+#include <listobject.h>
 #include <stdio.h>
 
 /**
@@ -23,3 +23,4 @@ void print_python_list_info(PyObject *p)
 		printf("Element %d: %s\n", i, Py_TYPE(PyList_GetItem(p, i))->tp_name);
 	}
 }
+
