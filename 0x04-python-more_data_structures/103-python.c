@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <Python.h>
-#include "/usr/include/python3.4/Python.h"
+#include "/usr/include/python3.4/bytesobject.h"
 
 /**
  * print_python_bytes - print some basic info about Python bytes objects
