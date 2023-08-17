@@ -56,7 +56,7 @@ void print_python_list(PyObject *p)
 
 	for (i = 0; i < size; i++)
 	{
-		in_list = PyList_GetItem(p, i);
+		in_list = PySequence_GetItem(p, i);
 		printf("Element %lu: %s\n", i, in_list->ob_type->tp_name);
 
 		if (strcmp(in_list->ob_type->tp_name, "bytes") == 0)
