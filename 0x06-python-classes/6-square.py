@@ -12,17 +12,14 @@ class Square:
     """
     A square class
 
-    Attributes:
-        __size: private instance size
-
     Args:
-        __size: the size of the square.
-        __position: the position of the square.
+        size: the size of the square.
+        position: the position of the square.
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Return the current area of the square."""
