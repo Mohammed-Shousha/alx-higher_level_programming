@@ -7,6 +7,7 @@ Classes:
     Square - A square class
 """
 
+
 class Square:
     """
     A square class
