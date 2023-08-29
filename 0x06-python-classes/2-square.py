@@ -17,7 +17,6 @@ class Square:
 
     Args:
         __size: the size of the square.
-	should be an int greater than 0.
     """
     def __init__(self, size=0):
         if type(size) is not int:
