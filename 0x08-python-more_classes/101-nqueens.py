@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """A program to find all solutions to the nqueens problem"""
 
+
 def nqueens(n):
     """A function to find all solutions to the nqueens problem"""
     board = [[0] * n for _ in range(n)]
     solve(board, 0, n)
+
 
 def solve(board, col, n):
     """A recursive function to solve the nqueens problem"""
@@ -21,6 +23,7 @@ def solve(board, col, n):
 
     return res
 
+
 def is_safe(board, row, col, n):
     """A function to check if a queen can be placed on board[row][col]"""
     for i in range(n):
@@ -34,6 +37,7 @@ def is_safe(board, row, col, n):
             return False
 
     return True
+
 
 def print_board(board):
     """A function to print the board"""
