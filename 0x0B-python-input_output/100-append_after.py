@@ -7,8 +7,10 @@ def append_after(filename="", search_string="", new_string=""):
     `search_string` in `filename`"""
     with open(filename, 'r+') as f:
         lines = f.readlines()
-        for i, line in enumerate(lines):
+        i = 0
+        for line in lines:
             if search_string in line:
                 lines.insert(i + 1, new_string)
+            i += 1
         f.seek(0)
-        f.write("".join(lines))
+        f.writelines(lines);
