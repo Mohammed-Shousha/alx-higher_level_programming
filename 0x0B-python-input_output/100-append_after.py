@@ -11,4 +11,4 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in line:
                 lines.insert(i + 1, new_string)
         f.seek(0)
-        f.writelines(lines)
+        f.write("".join(lines))
