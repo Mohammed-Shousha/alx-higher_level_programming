@@ -81,3 +81,7 @@ class Rectangle(Base):
         self.validate_int("height", n_height)
         self.validate_greater_than_zero("height", n_height)
         self.__height = n_height
+
+    def area(self):
+        """returns the area of the rectangle"""
+        return self.width * self.height
