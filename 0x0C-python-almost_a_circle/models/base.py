@@ -34,3 +34,12 @@ class Base:
             else:
                 file.write(Base.to_json_string(
                     [i.to_dictionary() for i in list_objs]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns a list of dictionaries from json string"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+
