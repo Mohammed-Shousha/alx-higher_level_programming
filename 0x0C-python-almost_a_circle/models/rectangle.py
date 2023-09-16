@@ -17,23 +17,21 @@ class Rectangle(Base):
     @staticmethod
     def validate_int(name, value):
         """validates integer value"""
-
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
 
     @staticmethod
     def validate_greater_than_zero(name, value):
         """validates greater than zero value"""
-
         if value <= 0:
             raise ValueError(f"{name} must be > 0")
 
     @staticmethod
     def validate_positive(name, value):
         """validates positive value"""
-
         if value < 0:
             raise ValueError(f"{name} must be >= 0")
+
     @property
     def x(self):
         """getter for x"""
@@ -92,3 +90,13 @@ class Rectangle(Base):
             for _ in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """returns the string representation of the rectangle instance"""
+        id = self.id
+        width = self.width
+        height = self.height
+        x = self.x
+        y = self.y
+
+        return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
