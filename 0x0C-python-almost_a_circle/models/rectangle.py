@@ -104,3 +104,13 @@ class Rectangle(Base):
         y = self.y
 
         return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
+
+    def update(self, *args, **kwargs):
+        """updates the rectangle instance arguments"""
+        if args:
+            arg_names = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, arg_names[i], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
