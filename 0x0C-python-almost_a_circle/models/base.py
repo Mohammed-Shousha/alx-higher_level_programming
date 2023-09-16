@@ -27,7 +27,6 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
         filename = cls.__name__ + ".json"
-
         with open(filename, mode="w") as file:
             if list_objs is None:
                 file.write("[]")
@@ -42,7 +41,6 @@ class Base:
             return []
         return json.loads(json_string)
 
-
     @classmethod
     def create(cls, **dictionary):
         """creates an instance from dictionary representation"""
@@ -53,3 +51,14 @@ class Base:
                 dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of classes instantiated from a json file"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as file:
+                list_dict = Base.from_json_string(file.read())
+                return [cls.create(**cls_dict) for cls_dict in list_dict]
+        except IOError:
+            return []
