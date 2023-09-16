@@ -43,3 +43,13 @@ class Base:
         return json.loads(json_string)
 
 
+    @classmethod
+    def create(cls, **dictionary):
+        """creates an instance from dictionary representation"""
+        if dictionary and len(dictionary) != 0:
+            if cls.__name__ == "Rectangle":
+                dummy = cls(1, 1)
+            else:
+                dummy = cls(1)
+            dummy.update(**dictionary)
+            return dummy
