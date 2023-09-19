@@ -107,12 +107,12 @@ class Base:
         screen.setworldcoordinates(0, 0, WIDTH, HEIGHT)
 
         trt = Turtle()
-        trt.screen.bgcolor("#777777")
+        trt.screen.bgcolor("#000")
         trt.pensize(3)
         trt.shape("turtle")
 
         trt.hideturtle()
-        trt.color("#ffffff")
+        trt.color("#fff")
         for rect in list_rectangles:
             trt.up()
             trt.goto(rect.x, rect.y)
@@ -123,7 +123,7 @@ class Base:
                 trt.forward(rect.height)
                 trt.left(90)
 
-        trt.color("#b5e3d8")
+        trt.color("#41f0ed")
         for sq in list_squares:
             trt.up()
             trt.goto(sq.x, sq.y)
