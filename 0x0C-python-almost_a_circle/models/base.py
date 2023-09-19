@@ -4,6 +4,7 @@ import json
 import csv
 from turtle import Turtle, Screen, exitonclick
 
+
 class Base:
     """Base class representation"""
 
@@ -82,7 +83,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """returns a list of classes instantiated from a file of JSON strings"""
+        """returns a list of classes from a file of csv strings"""
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as file:
