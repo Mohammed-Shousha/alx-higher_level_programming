@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all states where name matches the argument
+Lists all states where name matches the argument safely
 """
 
 from sys import argv

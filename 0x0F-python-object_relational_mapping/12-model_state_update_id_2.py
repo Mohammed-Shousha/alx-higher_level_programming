@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints the first State objects from the database hbtn_0e_6_usa
+Changes the name of a State object from the database hbtn_0e_6_usa
 """
 
 from sys import argv

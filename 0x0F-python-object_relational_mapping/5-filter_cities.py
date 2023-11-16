@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all cities of a state
+Lists all cities of a state agrgument
 """
 
 from sys import argv
