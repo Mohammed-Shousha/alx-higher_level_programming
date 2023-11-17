@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all State objects from the database hbtn_0e_6_usa
+Prints all City objects from the database hbtn_0e_14_usa
 """
 
 from sys import argv
