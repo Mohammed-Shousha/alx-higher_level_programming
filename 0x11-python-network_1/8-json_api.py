@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Sends a POST request to http://0.0.0.0:5000/search_user with a given letter as a parameter.
+Sends a POST request to http://0.0.0.0:5000/search_user
+with a given letter as a parameter.
 """
 import sys
 import requests
@@ -18,5 +19,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print(f"[{response.get('id')}] {response.get('name')}")
-    except:
+    except ValueError:
         print("Not a valid JSON")
